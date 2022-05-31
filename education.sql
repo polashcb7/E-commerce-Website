@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2018 at 09:08 AM
+-- Generation Time: Dec 17, 2018 at 01:09 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -29,28 +29,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `adminlogin` (
-  `email` varchar(255) NOT NULL,
-  `psw` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `adminsignup`
---
-
-CREATE TABLE `adminsignup` (
   `id` int(32) NOT NULL,
-  `psw` int(32) NOT NULL
+  `psw` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `adminsignup`
+-- Dumping data for table `adminlogin`
 --
 
-INSERT INTO `adminsignup` (`id`, `psw`) VALUES
-(1, 1),
-(1, 1);
+INSERT INTO `adminlogin` (`id`, `psw`) VALUES
+(1, '1');
 
 -- --------------------------------------------------------
 
@@ -86,7 +74,12 @@ INSERT INTO `apparatusup` (`id`, `name`, `apparatus`, `acategory`, `aprice`, `ad
 (12, 'ac3.jpg', 'Chemical Splash Safety Goggles, Child', 'Chemistry', 'TK 250', 'Protect young eyes from splashes as kids work with chemicals. These safety goggles also protect from particles or projectiles. Designed for kids up to 90 lbs.'),
 (13, 'ab1.jpg', 'Introductory Dissection Kit', 'Biology', 'TK 1500', 'This economical kit has everything needed for dissecting a frog, earthworm, and grasshopper, making it a great way to introduce kids to dissection.'),
 (14, 'ab2.jpg', 'Home Microscope', 'Biology', 'TK 3000', 'With this affordable, high-quality compound microscope you will be able to study biology up close! It has fluorescent lighting and 400x magnification, making it an ideal microscope for kids and for high school student labs. Plus, a lifetime warranty.'),
-(15, 'ab3.jpg', 'Brain Model, small', 'Biology', 'TK 1200', 'See how the parts of the brain work together as you assemble this economical, 31-piece model.');
+(15, 'ab3.jpg', 'Brain Model, small', 'Biology', 'TK 1200', 'See how the parts of the brain work together as you assemble this economical, 31-piece model.'),
+(16, 'ap1.jpg', 'Bristlebot Robotics Kit', 'Home', 'TK 1050', 'Build three different kinds of wiggling, wobbling robots for a fun introduction to robotics'),
+(17, 'ac1.jpg', 'Chemistry of Food Experiment Kit', 'Home', 'TK 1020', 'If you are what you eat, what makes up your food? Show the connections between chemistry & nutrition for a meaningful STEM activity.'),
+(18, 'ab1.jpg', 'Introductory Dissection Kit', 'Home', 'TK 1500', 'This economical kit has everything needed for dissecting a frog, earthworm, and grasshopper, making it a great way to introduce kids to dissection.'),
+(19, 'ap2.jpg', 'Quantity Discount Pricing - Save Big', 'Home', 'TK 2000', 'Make teaching about electricity & magnetism easy with this complete study in static electricity, current electricity, magnetism, and electromagnetism.'),
+(20, 'ac2.jpg', 'Lab Chemistry Hardware Set', 'Home', 'TK 1020', 'Our chemistry hardware set contains items that you will use again and again.');
 
 -- --------------------------------------------------------
 
@@ -123,7 +116,12 @@ INSERT INTO `bookup` (`id`, `name`, `book`, `bcategory`, `bprice`, `bdetails`) V
 (13, 'bm1.gif', 'Fundamentals of Mathematics', 'Mathematics', 'TK 213', 'This book is about  Fundamentals of Mathematics'),
 (14, 'bm2.jpg', 'Mathematics Dictionary (Paperback)', 'Mathematics', 'TK 375', 'This book is about  Mathematics Dictionary '),
 (15, 'bm3.gif', 'Engineering Mathematics (Paperback)', 'Mathematics', 'TK 810', 'This book is about  Engineering Mathematics '),
-(16, 'bm4.jpg', 'Discrete Mathematics  (Paperback)', 'Mathematics', 'TK 643', 'This book is about  Discrete Mathematics  ');
+(16, 'bm4.jpg', 'Discrete Mathematics  (Paperback)', 'Mathematics', 'TK 643', 'This book is about  Discrete Mathematics  '),
+(17, 'bp1.jpg', 'Nuclear Physics (Graduate Texts in Physics) (Hardcover)', 'Home', 'TK 130', 'This book is about nuclear physics'),
+(18, 'bc1.jpg', 'Quantum Mechanics in Chemistry (Physical Chemistry Textbook Series)', 'Home', 'TK 1470', 'This book is about Quantum Mechanics in Chemistry '),
+(19, 'bb1.jpg', 'Campbell Biology (Paperback)', 'Home', 'TK 6110', 'This book is about Â Campbell Biology'),
+(20, 'bm1.gif', 'Fundamentals of Mathematics', 'Home', 'TK 213', 'This book is about Â Fundamentals of Mathematics'),
+(22, 'bp2.gif', 'Modern Physics (Paperback)', 'Home', 'TK 2050', 'This book is about modern physics');
 
 -- --------------------------------------------------------
 
@@ -215,19 +213,40 @@ CREATE TABLE `joinus` (
 INSERT INTO `joinus` (`id`, `firstname`, `middlename`, `lastname`, `profession`, `organisation`, `phone`, `email`, `checklist`) VALUES
 (21, 'Sajid', 'kobutor', 'Shahnawaz', 'student', 'nsu', '0177641', 'sajidshahnawaz@gmail.com', 'Physics '),
 (22, 'Faria', 'Karim', 'Porna', 'Student', 'North South University', '0171137656', 'aaa@gmail.com', 'Physics '),
-(23, 'Faria', 'Karim', 'Porna', 'Student', 'North South University', '0171137656', 'aaa@gmail.com', 'Physics '),
-(24, 'a', 'b', 'c', 'student', 'nsu', '123', 'abir@gmail.com', 'Physics ');
+(23, 'Faria', 'Karim', 'Porna', 'Student', 'North South University', '0171137656', 'aaa@gmail.com', 'Physics ');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `login` (
-  `email` varchar(255) NOT NULL,
-  `psw` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `card_num` bigint(20) NOT NULL,
+  `card_cvc` int(5) NOT NULL,
+  `card_exp_month` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `card_exp_year` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_price` float(10,2) NOT NULL,
+  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'usd',
+  `paid_amount` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `txn_id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_status` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `name`, `email`, `card_num`, `card_cvc`, `card_exp_month`, `card_exp_year`, `item_name`, `item_number`, `item_price`, `item_price_currency`, `paid_amount`, `paid_amount_currency`, `txn_id`, `payment_status`, `created`, `modified`) VALUES
+(4, 'Test', 'test@gmail.com', 4242424242424242, 123, '12', '2020', 'bop', 'PS123456', 550.00, 'usd', '550', 'usd', 'txn_1DiKH4IyLLDav58OQIHhwhcM', 'succeeded', '2018-12-17 12:28:43', '2018-12-17 12:28:43');
 
 -- --------------------------------------------------------
 
@@ -254,6 +273,10 @@ INSERT INTO `signup` (`fullname`, `email`, `psw`, `pswrepeat`) VALUES
 ('Ataul Karim Rony', 'ataul@gmail.com', '12345678', '12345678'),
 ('', '', '', ''),
 ('Ataul Karim Rony', 'aaa@gmail.com', '12345678', '12345678'),
+('', '', '', ''),
+('', '', '', ''),
+('', '', '', ''),
+('', '', '', ''),
 ('', '', '', '');
 
 -- --------------------------------------------------------
@@ -284,6 +307,7 @@ INSERT INTO `videoup` (`id`, `name`, `video`, `vcategory`, `vprice`, `vdetails`)
 (6, 'vp6.mp4', 'More on Newtons first law of motion ', 'Physics', 'TK 20', 'This lecture is about newtons first law of motion '),
 (7, 'vp7.mp4', 'Newtons second law of motion | Forces and Newtons laws of motion', 'Physics', 'TK 20', 'This lecture is about newtons second law of motion '),
 (8, 'vp8.mp4', 'Newtons third law of motion | Forces and Newtons laws of motion ', 'Physics', 'TK 20', 'This lecture is about newtons third law of motion.'),
+(9, 'vp9.mp4', 'Introduction to gravity | Centripetal force and gravitation ', 'Physics', 'TK 20', 'This lecture is about gravity, centripetal force and gravitation.'),
 (10, 'vc1.mp4', 'Introduction to chemistry | Atoms, compounds, and ions ', 'Chemistry', 'TK 20', 'This lecture is about Atoms, compounds, and ions '),
 (11, 'vc2.mp4', 'Elements and atoms | Atoms, compounds, and ions ', 'Chemistry', 'TK 20', 'This lecture is about Elements and atoms '),
 (12, 'vc3.mp4', 'Orbitals | Electronic structure of atoms | ', 'Chemistry', 'TK 20', 'This lecture is about Electronic structure of atoms '),
@@ -294,11 +318,21 @@ INSERT INTO `videoup` (`id`, `name`, `video`, `vcategory`, `vprice`, `vdetails`)
 (18, 'vm3.mp4', 'Binomial theorem | Polynomial and rational functions | Algebra II', 'Mathematics', 'TK 20', 'This lecture is about Binomial theorem, Polynomial and rational functions.\r\n'),
 (19, 'vm2.mp4', 'Finding a percentage | Decimals | Pre-Algebra', 'Mathematics', 'TK 20', 'This lecture is about Finding a percentage\r\n'),
 (20, '', '', '', '', ''),
-(21, '', '', '', '', '');
+(21, 'vp1.mp4', 'Intro to vectors & scalars | One-dimensional motion ', 'Home', 'TK 20', 'This lecture is about vectors & scalars. Here the detail idea about vector and scalar quantities have been given.'),
+(22, 'vc1.mp4', 'Introduction to chemistry | Atoms, compounds, and ions ', 'Home', 'TK 20', 'This lecture is about Atoms, compounds, and ions '),
+(23, 'vb1.mp4', 'Introduction to Evolution and Natural Selection', 'Home', 'TK 20', 'This lecture is about Evolution and Natural Selection\r\n'),
+(24, 'vm1.mp4', 'Logarithms | Logarithms | Algebra II', 'Home', 'TK 20', 'This lecture is about Logarithms | Logarithms | Algebra II\r\n'),
+(25, '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `adminlogin`
+--
+ALTER TABLE `adminlogin`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indexes for table `apparatusup`
@@ -331,6 +365,12 @@ ALTER TABLE `joinus`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `videoup`
 --
 ALTER TABLE `videoup`
@@ -344,13 +384,13 @@ ALTER TABLE `videoup`
 -- AUTO_INCREMENT for table `apparatusup`
 --
 ALTER TABLE `apparatusup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `bookup`
 --
 ALTER TABLE `bookup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `commenttable`
@@ -368,13 +408,19 @@ ALTER TABLE `institutionsview`
 -- AUTO_INCREMENT for table `joinus`
 --
 ALTER TABLE `joinus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `videoup`
 --
 ALTER TABLE `videoup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
