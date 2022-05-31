@@ -1,0 +1,16 @@
+#about{
+   margin-left: 40%;
+}
+@media only screen and (min-width: 356px) and (max-width: 840px) {
+
+
+
+  
+#about{
+   margin-left: 10%;
+}
+
+
+
+
+}

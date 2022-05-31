@@ -1,0 +1,310 @@
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: #ff6600;
+    margin-top: 20px;
+    border:2px solid black;
+    border-radius: 15px;
+    
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:255px;
+    background: #3E3B1A;
+    margin :15px 14px 50px 40px; 
+    
+    box-sizing: border-box;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:60px;
+    margin-top: -35px;
+    
+    background: blue;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+.write{
+    width: 100%;
+    margin-top: 5px;
+    
+    
+    
+        padding: 0;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+}
+
+.price{
+    width: 100%;
+
+   
+    margin-top: -15px;
+    color:white;
+    font-size: 15px;
+    text-align: center;
+   
+
+    
+   
+}
+
+
+.video{
+    padding: 2%;
+    text-align: center;
+   
+}
+
+
+
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:60%;
+        margin-left: 40px;
+         height: 150%;
+    }
+
+    .price{
+    width: 100%;
+   
+    text-align: left;
+    color:white;
+    font-size: 17px;
+    margin-left: 5%;
+
+    margin-top: 20px;
+   
+}
+
+
+}
+
+
+.book{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: #ff6600;
+    margin-top: 20px;
+    border:2px solid black;
+    border-radius: 15px;
+   
+}
+
+.book ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.book ul li{
+    float:left;
+    list-style: none;
+    width:17%;
+    height:325px;
+    background: #3E3B1A;
+    margin :25px 14px 55px 20px; 
+    
+    box-sizing: border-box;
+}
+.book ul li:hover{
+    opacity: 0.8;
+}
+
+.book ul li .bottom{
+    width: 100%;
+    height:70px;
+    margin-top: 3px;
+    
+    background: blue;    
+    text-align: center;
+    color:white;
+    
+   
+}
+.write{
+    width: 100%;
+    margin-top: 5px;
+    
+    
+    
+        padding: 0;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+}
+
+.price{
+    width: 100%;
+
+   margin-top: -15px;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+   
+
+    
+   
+}
+
+.image{
+    padding: 5%;
+    text-align: center;
+   
+}
+
+
+
+
+@media screen and (max-width:1250px){
+    .book ul li{
+        width:60%;
+        margin-left: 40px;
+         height: 150%;
+    }
+
+    .price{
+    width: 100%;
+   
+    text-align: left;
+    color:white;
+    font-size: 17px;
+    margin-left: 5%;
+
+    margin-top: 10px;
+   
+}
+
+
+}
+
+
+.app{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: #ff6600;
+    margin-top: 20px;
+    border:2px solid black;
+    border-radius: 15px;
+    
+}
+
+.app ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.app ul li{
+    float:left;
+    list-style: none;
+    width:15%;
+    height:270px;
+    background: #3E3B1A;
+    margin :25px 25px 50px 35px; 
+    
+    box-sizing: border-box;
+}
+.app ul li:hover{
+    opacity: 0.8;
+}
+
+.app ul li .bottom{
+    width: 100%;
+    height:55px;
+    
+    background: blue;    
+    text-align: center;
+    color:white;
+    
+   
+}
+.write{
+    width: 100%;
+    margin-top: 5px;
+    
+    
+    
+        padding: 0;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+}
+
+.price{
+    width: 100%;
+
+   margin-top:-20px;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+   
+
+    
+   
+}
+
+.image{
+    padding: 3%;
+    text-align: center;
+   
+}
+
+
+
+
+@media screen and (max-width:1250px){
+    .app ul li{
+        width:60%;
+        margin-left: 40px;
+         height: 150%;
+    }
+
+    .price{
+    width: 100%;
+   
+    text-align: left;
+    color:white;
+    font-size: 17px;
+    margin-left: 5%;
+
+    margin-top: 20px;
+   
+}
+.app ul li .bottom{
+    width: 100%;
+    height:100px;
+    
+    background: blue;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+}

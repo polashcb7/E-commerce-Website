@@ -1,0 +1,98 @@
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background: #ff6600;
+    margin-top: 20px;
+    border:2px solid black;
+    border-radius: 15px;
+}
+
+.container ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+    height:270px;
+    background: #3E3B1A;
+    margin :25px 10px 15px 40px; 
+    
+    box-sizing: border-box;
+}
+.container ul li:hover{
+    opacity: 0.8;
+}
+
+.container ul li .bottom{
+    width: 100%;
+    height:60px;
+    
+    background: blue;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+.write{
+    width: 100%;
+    margin-top: 5px;
+    
+    
+    
+        padding: 0;
+    text-align: center;
+    color:white;
+    font-size: 15px;
+   
+}
+
+.price{
+    width: 100%;
+
+   
+    margin-top: -15px;
+    color:white;
+    font-size: 15px;
+    text-align: center;
+   
+
+    
+   
+}
+
+.video{
+    padding: 2%;
+    text-align: center;
+   
+}
+
+
+
+
+@media screen and (max-width:1250px){
+    .container ul li{
+        width:60%;
+        margin-left: 40px;
+         height: 150%;
+    }
+
+    .price{
+    width: 100%;
+   
+    text-align: left;
+    color:white;
+    font-size: 17px;
+    margin-left: 5%;
+
+    margin-top: 20px;
+   
+}
+
+
+}

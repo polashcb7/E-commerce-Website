@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(251, 239, 105, 0.66);
+    background-size: cover;
+}
+
+.perpendicular {
+    margin-top: 50px;
+    left: 100px;
+    float: left;
+    width: 5.33%;
+    padding: 20px;
+}
+
+
+/* Clearfix (clear floats) */
+.line::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: black;
+}
+
+
+@media only screen and (min-width: 356px) and (max-width: 940px) {
+
+
+
+  .dropdown {
+    left:20px;
+}
+
+
+
+
+}
